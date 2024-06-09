@@ -15,5 +15,14 @@ def emotion_detector(text_to_analyse):
     emotions = json_to_be_parsed[0]['emotion']
 
     anger_score = emotions['anger']
-    
-    return {'message': anger_score}
+    disgust_score = emotions['disgust']
+    fear_score = emotions['fear']
+    joy_score = emotions['joy']
+    sadness_score = emotions['sadness']
+
+    return {'anger': anger_score,
+            'disgust': disgust_score,
+            'fear': fear_score,
+            'joy': joy_score,
+            'sadness': sadness_score
+            }
