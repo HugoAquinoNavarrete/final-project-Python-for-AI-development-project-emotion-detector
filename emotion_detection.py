@@ -10,9 +10,10 @@ def emotion_detector(text_to_analyse):
 
     formatted_response = json.loads(response.text)
 
-    emotion_predictions = formatted_response['emotionPredictions']
+    json_to_be_parsed = formatted_response['emotionPredictions']
 
-    anger_score = emotion_predictions[0]['emotion']
-    #anger_score = emotion_predictions['emotion']['anger']
+    emotions = json_to_be_parsed[0]['emotion']
+
+    anger_score = emotions['anger']
     
     return {'message': anger_score}
