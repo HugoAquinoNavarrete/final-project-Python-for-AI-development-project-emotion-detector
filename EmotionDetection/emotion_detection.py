@@ -21,9 +21,10 @@ def emotion_detector(text_to_analyse):
     sadness_score = emotions['sadness']
 
     score_dominant_emotion = anger_score
+    dominant_emotion = ''
 
     for emotion, score in emotions.items():
-        if score > score_dominant_emotion :
+        if score >= score_dominant_emotion :
             score_dominant_emotion = score
             dominant_emotion = emotion
 
