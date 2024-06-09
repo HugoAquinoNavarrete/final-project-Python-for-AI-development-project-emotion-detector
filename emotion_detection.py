@@ -12,6 +12,7 @@ def emotion_detector(text_to_analyse):
 
     emotion_predictions = formatted_response['emotionPredictions']
 
-    anger_score = emotion_predictions['emotion']['anger']
+    anger_score = emotion_predictions[0][0]
+    #anger_score = emotion_predictions['emotion']['anger']
     
-    return {'anger': anger_score}
+    return {'message': anger_score}
