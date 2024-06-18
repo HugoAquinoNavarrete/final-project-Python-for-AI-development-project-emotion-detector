@@ -28,10 +28,9 @@ def emotion_detector(text_to_analyse):
             score_dominant_emotion = score
             dominant_emotion = emotion
 
-    return (json.dumps({'anger': anger_score,
+    return ({'anger': anger_score,
             'disgust': disgust_score,
             'fear': fear_score,
             'joy': joy_score,
             'sadness': sadness_score,
-            'dominant_emotion': dominant_emotion},
-            indent = 0))
+            'dominant_emotion': dominant_emotion})
