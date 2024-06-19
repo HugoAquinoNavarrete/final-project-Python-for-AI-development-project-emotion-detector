@@ -31,13 +31,17 @@ def sent_detector():
     sadness_score = response['sadness']
     dominant_emotion = response['dominant_emotion']
 
-    text_to_be_displayed = "For this statement, the response is "
-    text_to_be_displayed += "\'anger\': " + str(anger_score) + ", "
-    text_to_be_displayed += "\'disgust\': " + str(disgust_score) + ", "
-    text_to_be_displayed += "\'fear\': " + str(fear_score) + ", "
-    text_to_be_displayed += "\'joy\': " + str(joy_score) + " and "
-    text_to_be_displayed += "\'sadness\': " + str(sadness_score) + ". "
-    text_to_be_displayed += "The dominant emotion is " + dominant_emotion + "." 
+    if dominant_emotion is None:
+        text_to_be_displayed = "Invalid text! Please try again!"
+
+    else:
+        text_to_be_displayed = "For this statement, the response is "
+        text_to_be_displayed += "\'anger\': " + str(anger_score) + ", "
+        text_to_be_displayed += "\'disgust\': " + str(disgust_score) + ", "
+        text_to_be_displayed += "\'fear\': " + str(fear_score) + ", "
+        text_to_be_displayed += "\'joy\': " + str(joy_score) + " and "
+        text_to_be_displayed += "\'sadness\': " + str(sadness_score) + ". "
+        text_to_be_displayed += "The dominant emotion is " + dominant_emotion + "." 
     
     return text_to_be_displayed
     
