@@ -2,7 +2,7 @@
 
 * **Task1: Clone the project repository**
   - Repository folder structure 
-!(/1_folder_structure.png)
+![](./1_folder_structure.png)
 
 * **Task 2: Create an emotion detection application using Watson NLP library**
   - Write code for the application function
