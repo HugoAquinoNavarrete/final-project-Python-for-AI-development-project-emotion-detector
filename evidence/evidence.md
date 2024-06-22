@@ -6,15 +6,21 @@
 
 * **Task 2: Create an emotion detection application using Watson NLP library**
   - Write code for the application function
+![](./2a_emotion_detection.png)
   - Import the application without errors
+![](./2b_application_creation.png)
 
 * **Task 3: Format the output of the application**
   - Modify the emotion_predictor function accurately for it to return the provided output format
+![](./3a_output_formatting.png)
   - Check that the output format is accurate 
+![](./3b_formatted_output_test.png)
 
 * **Task 4: Package the application**
   - Create the folder structure for packaging the application and create the __init__.py file
+![](./4a_packaging.png)
   - Verify that the output is as expected
+![](./4b_packaging_test.png)
 
 * **Task 5: Run Unit tests on your application**
   - Create the required unit tests
